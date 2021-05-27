@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config();
+//require('dotenv').config();
 const path = require('path');
 const hbs = require('express-handlebars');
 const passport = require('passport');
@@ -14,7 +14,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(session({ secret: process.env.sessionSecret }));
+app.use(session({ secret: 'anything' }));
 app.use(passport.initialize());
 app.use(passport.session());
 
